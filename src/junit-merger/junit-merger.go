@@ -10,6 +10,9 @@ import (
 	"strconv"
 )
 
+//todo: directory support
+
+//JUnitReport represents either a single test suite or a collection of test suites
 type JUnitReport struct {
 	XMLName   xml.Name
 	XML       string       `xml:",innerxml"`
@@ -38,8 +41,6 @@ func main() {
 		flag.Usage()
 		return
 	}
-
-	//todo: walk directories recursively
 
 	var mergedReport JUnitReport
 	startedReading := false
